@@ -28,3 +28,12 @@ public class AntiDiagonal{
         System.out.println("here is the sum of anti-diagonal elements : "+sum);
     }
 }
+/**
+ * Alternative logic :
+ * int j;
+ * for(int i = 0; i<squarematrix.length; i++){
+ *             j =  squarematrix.length-i-1;
+                sum += squarematrix[i][j];
+            }
+        }
+ */
