@@ -1,0 +1,45 @@
+// Class and Object Example no 4, program to find the sum of two distance into ft + inches format , and adjust sum accordingly !
+class DistanceExample{
+    int feet;
+    int inch;
+    public DistanceExample(){
+
+    }
+    public DistanceExample(int ft, int in){
+        feet = ft;
+        inch = in;
+    }
+    public String addDistance(DistanceExample obj){//public DistanceExample addDistance(DistanceExample obj){
+        int addFeet = feet + obj.feet;
+        int addInch = inch + obj.inch;
+        int check = addInch/12;
+        for(int i = 0; i<check; i++){
+            if(addInch>=12){
+                if(addInch%12==0){
+                addInch = addInch - 12;
+                addFeet++;
+                }
+                else {
+                addInch = addInch - 12;
+                addFeet++;
+                }
+            }
+        }
+        //return  DistanceExample(addFeet, addInch);
+        return  (addFeet + " feet " + addInch + " inches");
+    }
+    public void displayDistance(){
+        System.out.println("Distance : "+feet+" ft "+inch+" inch");
+    }
+}
+public class Distance{
+    public static void main(String[] args){
+        DistanceExample d1 = new DistanceExample(100,11);
+        DistanceExample d2 = new DistanceExample(100,11);
+        // One object hold it's property as feet and distance , so we are now adding two objects
+        // So then we should pass objects as parameter !!!
+        //int add = d1.addDistance(DistanceExample d2);
+        //System.out.println("Distance : "+feet+" ft "+inch+" inch");
+        System.out.println(d1.addDistance(d2));
+    }
+}
