@@ -12,19 +12,12 @@ class DistanceExample{
     public String addDistance(DistanceExample obj){//public DistanceExample addDistance(DistanceExample obj){
         int addFeet = feet + obj.feet;
         int addInch = inch + obj.inch;
-        int check = addInch/12;
-        for(int i = 0; i<check; i++){
-            if(addInch>=12){
-                if(addInch%12==0){
-                addInch = addInch - 12;
-                addFeet++;
-                }
-                else {
-                addInch = addInch - 12;
-                addFeet++;
-                }
-            }
-        }
+        /**
+         * full_feet = inches / 12 how many feet
+           remaining_inches = inches % 12 leftover inches
+         */// Convert inches to feet
+        addFeet = addFeet + (addInch/12);
+        addInch = addInch%12;
         //return  DistanceExample(addFeet, addInch);
         return  (addFeet + " feet " + addInch + " inches");// here passing two values as String ?
     }
@@ -43,3 +36,17 @@ public class Distance{
         System.out.println(d1.addDistance(d2));
     }
 }
+/**
+ * for(int i = 0; i<check; i++){
+            if(addInch>=12){
+                if(addInch%12==0){
+                addInch = addInch - 12;
+                addFeet++;
+                }
+                else {
+                addInch = addInch - 12;
+                addFeet++;
+                }
+            }
+        }
+ */
