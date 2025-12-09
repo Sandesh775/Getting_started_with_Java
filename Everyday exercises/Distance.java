@@ -2,13 +2,13 @@
 class DistanceExample{
     int feet;
     int inch;
-    public DistanceExample(){
+    public DistanceExample(){// default constructor
 
     }
-    public DistanceExample(int ft, int in){
+    public DistanceExample(int ft, int in){// parameterized constructor
         feet = ft;
         inch = in;
-    }
+    }    //return type : String
     public String addDistance(DistanceExample obj){//public DistanceExample addDistance(DistanceExample obj){
         int addFeet = feet + obj.feet;
         int addInch = inch + obj.inch;
@@ -26,7 +26,7 @@ class DistanceExample{
             }
         }
         //return  DistanceExample(addFeet, addInch);
-        return  (addFeet + " feet " + addInch + " inches");
+        return  (addFeet + " feet " + addInch + " inches");// here passing two values as String ?
     }
     public void displayDistance(){
         System.out.println("Distance : "+feet+" ft "+inch+" inch");
@@ -34,8 +34,8 @@ class DistanceExample{
 }
 public class Distance{
     public static void main(String[] args){
-        DistanceExample d1 = new DistanceExample(100,11);
-        DistanceExample d2 = new DistanceExample(100,11);
+        DistanceExample d1 = new DistanceExample(100,11);// this enable us to make object propert assigned while creating object instead doing it manually
+        DistanceExample d2 = new DistanceExample(100,11);// passing values as parameters to special method known as constructor
         // One object hold it's property as feet and distance , so we are now adding two objects
         // So then we should pass objects as parameter !!!
         //int add = d1.addDistance(DistanceExample d2);
