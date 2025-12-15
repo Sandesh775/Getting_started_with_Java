@@ -1,6 +1,6 @@
 // revising the concept of switch and ternary operator
 import java.util.Scanner;
-public class Revised{
+public class VowelConsonant{
     public static void main(String [] args){
         Scanner obj = new Scanner(System.in);
         System.out.println("Enter your first name: ");
