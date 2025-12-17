@@ -12,7 +12,7 @@ public class DigitCountNumber{
             temp = temp/10;
         }
         System.out.println("Digit count in number : "+count);
-        System.out.println("Extracting number from Right to left : ");
+        System.out.println("Extracting number from Right to left using maths logic: ");
         for(int i = 1; i <= count; i++){
             digit = number % 10;
             System.out.print(digit+"\t");

@@ -20,3 +20,13 @@ public class NfibonacciNumbers{
         }
     }
 }
+/**int a = 0;
+ * int b = 1;
+ * int c = 0;
+ * for( int i = 1 ; i <= n; i++){
+            System.out.print(a+"\t");
+            a = b;
+            c = a + b;
+            b = c;
+        }
+ */
