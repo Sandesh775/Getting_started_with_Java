@@ -5,13 +5,19 @@ public class ReverseString{
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter any string : ");
         String string = sc.nextLine();
+        StringBuilder str = new StringBuilder();
+        
         // converting String into array of characters 
-        System.out.println("Original string : "+string);
-        System.out.println("string length: "+string.length());
-        char [] chars = string.toCharArray();
-        System.out.println("Reverse string : ");
-        for(int i = (string.length()-1); i >= 0; i--){
-            System.out.print(chars[i]);
+        // System.out.println("Original string : "+string);
+        // System.out.println("string length: "+string.length());
+        // char [] chars = string.toCharArray();
+        // System.out.println("Reverse string : ");
+        // for(int i = (string.length()-1); i >= 0; i--){
+        //     System.out.print(chars[i]);
+        // }
+        for(int i = (string.length()-1);i>=0; i--){
+            str.append(string.charAt(i));
         }
+        System.out.println(str);
     }
 }
