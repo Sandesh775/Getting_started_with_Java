@@ -31,7 +31,7 @@ public class Problem1_set2 {
                 index = i;
             }
         }
-        System.out.println("Student with highest average : " + students[index].avg);
+        System.out.println("Student with highest average : " + highest_avg);
         students[index].displayReport();
         int count = 0;
         for (Student s : students) {
@@ -68,7 +68,6 @@ class Student{
     double[] marks = new double[5];
     double avg;
     String grade;
-    Scanner sc = new Scanner(System.in);
     public Student(String name, int rollNumber, double[] marks) {
         this.name = name;
         this.rollNumber = rollNumber;
