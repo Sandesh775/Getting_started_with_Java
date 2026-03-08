@@ -1,5 +1,6 @@
 package RecursionExamples;
-// program to find nth fibonacci number
+// program to find nth fibonacci number//
+// 1 1 2 3 5 8.....
 import java.util.*;
 public class fibonacci {
     public static void main(String[] args) {
@@ -13,10 +14,18 @@ public class fibonacci {
         }
         System.out.println(fibonacci(n));
     }
-    static int fibonacci(int n){
-        if( n < 2){
-            return n;
-        }
+//    public static int fibonacci(int n){
+//        if( n < 2){
+//            return n;
+//        }
+//        return fibonacci(n-1)+fibonacci(n-2);
+//    }
+public static int fibonacci(int n){
+    if( n >= 3){
         return fibonacci(n-1)+fibonacci(n-2);
+    }
+    else {
+        return 1; // first and second number is both 1
+    }
     }
 }
