@@ -39,3 +39,42 @@ public class Qno1 {
 
     }
 }
+class ParkingSystem extends HybridParking{
+
+}
+interface CarParking{
+    int carCapacity = 100;
+    void parkCar();
+    void removeCar();
+}
+interface BikeParking{
+    int bikeCapacity = 50;
+    void parkBike();
+    void removeBike();
+}
+//interface HybridParkingInterface extends CarParking,BikeParking{
+//    int totalParkingCapacity = 150;
+//    void parkCar();
+//    void removeCar();
+//    void parkBike();
+//    void removeBike();
+//}
+class HybridParking implements CarParking,BikeParking{// class HybridParking implements HybridParkingInterface
+    int totalParkingCapacity = 150;
+    @Override
+    public void parkCar(){
+        System.out.println("Car parked !");
+    }
+    @Override
+    public void removeCar(){
+        System.out.println("Car parked removed!");
+    }
+    @Override
+    public void parkBike(){
+        System.out.println("Bike parked !");
+    }
+    @Override
+    public void removeBike(){
+        System.out.println("Bike parked removed!");
+    }
+}
