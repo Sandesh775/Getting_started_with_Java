@@ -11,12 +11,19 @@ public class Student{
     public String getName(){
         return name;
     }
-    public double calculatePercentage(){
+    public double calculateAverage(){
         int sum = 0;
         for( int i : marks){
             sum += i;
         }
         return sum/3.0;
+    }
+    public double calculatePercentage(){
+        int sum = 0;
+        for( int i : marks){
+            sum += i;
+        }
+        return sum/3.0;// double percentage = (total / (n * maxMarksPerSubject)) * 100;
     }
     public void displayInfo(){
         System.out.println("Name : "+this.name+" Roll no : "+this.rollNumber+" Marks : "+ Arrays.toString(marks));
@@ -54,5 +61,31 @@ public class Student{
 //        }
 //        return false;
         return this.calculatePercentage() >= 35;
+    }
+    public int getHighestMark(){
+        int highestMark = 0;
+        for(int i : marks){
+            if(i > highestMark){
+                highestMark = i;
+            }
+        }
+        return highestMark;
+    }
+    public int getLowestMark(){
+        int lowestMark = marks[0];
+        for(int i : marks){
+            if(i < lowestMark){
+                lowestMark = i;
+            }
+        }
+        return lowestMark;
+    }
+    public boolean isAllSubjectsPassing(){
+        for(int i: marks){
+            if(i < 35){
+                return false;
+            }
+        }
+        return true;
     }
 }
