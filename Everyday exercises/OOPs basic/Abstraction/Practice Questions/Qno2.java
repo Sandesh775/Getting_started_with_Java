@@ -30,6 +30,39 @@
  * */
 public class Qno2 {
     public static void main(String[] args) {
-
+        MultiOperandCalculator c1 = new MultiOperandCalculator();
+        int twosum = c1.add(5,5);
+        int threesum = c1.add(5,5,9);
+        int foursum = c1.add(1,2,3,4);// Can add/subtract ANY number of numbers (varargs)
+        int fivesum = c1.add(10, 20, 30, 40, 50);
+        System.out.println("Two sum : "+twosum+"\t Three sum : "+threesum+"\t Four sum : "+foursum+"\t Fivesum : "+fivesum);
+    }
+}
+interface BasicCalculator{
+    int add(int n1, int n2);
+}
+interface AdvancedCalculator{
+    int add(int n1, int n2, int n3);
+}
+interface ScientificCalculator{
+    int add(int ... numbers);
+}
+class MultiOperandCalculator implements BasicCalculator,AdvancedCalculator,ScientificCalculator{
+    @Override
+    public int add(int a,int b){
+       return (a+b);
+    }
+    @Override
+    public int add(int a,int b, int c){
+        return (a+b+c);
+    }
+    @Override
+    public int add(int ... numbers) {
+        //         int[] array
+        int total = 0;
+        for (int num : numbers) {
+            total += num;
+        }
+        return total;
     }
 }

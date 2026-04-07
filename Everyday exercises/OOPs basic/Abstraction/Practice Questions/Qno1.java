@@ -36,11 +36,21 @@
  * */
 public class Qno1 {
     public static void main(String[] args) {
+        HybridParking hybridZone = new HybridParking();
+        // Demonstrate all capabilities from BOTH parking systems
+        System.out.println("HYBRID PARKING ZONE - Can handle both Cars AND Bikes!");
+        System.out.println("Total capacity: " + hybridZone.totalParkingCapacity);
 
+        // Car operations (from CarParking interface)
+        System.out.println("\n--- Car Operations ---");
+        hybridZone.parkCar();
+        hybridZone.removeCar();
+
+        // Bike operations (from BikeParking interface)
+        System.out.println("\n--- Bike Operations ---");
+        hybridZone.parkBike();
+        hybridZone.removeBike();
     }
-}
-class ParkingSystem extends HybridParking{
-
 }
 interface CarParking{
     int carCapacity = 100;
