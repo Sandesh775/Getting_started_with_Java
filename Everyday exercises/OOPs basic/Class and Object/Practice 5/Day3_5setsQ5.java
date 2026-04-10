@@ -15,6 +15,16 @@ public class Day3_5setsQ5 {
         Student s5 = new Student("Yadav",111,new int[]{90,85,99});
 
         Student[] students = {s1,s2,s3,s4,s5};
-
+            double highest = students[0].calculatePercentage();
+            Student student = null;
+            for(int j = 0; j< 3; j++){
+                for(int i = 1;i<students.length-j; i++){
+                    if(students[i].calculatePercentage() > highest){
+                        highest = students[i].calculatePercentage();
+                        student = students[i];
+                    }
+                }
+                student.displayInfo();
+            }
     }
 }
