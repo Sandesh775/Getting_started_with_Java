@@ -1,35 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="975958f1-8c95-4f21-ba13-185d196c0b2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Reference and Object Practice Questions/Exercise7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reference and Object Practice Questions/Exercise8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reference and Object Practice Questions/out/production/Reference and Object Practice Questions/Exercise6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Reference and Object Practice Questions/out/production/Reference and Object Practice Questions/Exercise6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reference and Object Practice Questions/out/production/Reference and Object Practice Questions/~$estions.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Reference and Object Practice Questions/out/production/Reference and Object Practice Questions/~$estions.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problem6_Basics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Sandesh775"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Sandesh775&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Sandesh775/Getting_started_with_Java.git",
-    "accountId": "51b25cec-dc21-4bf0-bb00-2fc59f9c57b1"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Sandesh775/Getting_started_with_Java.git&quot;,
+    &quot;accountId&quot;: &quot;51b25cec-dc21-4bf0-bb00-2fc59f9c57b1&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="3CAEaOozehcgNmfQ87VfL7V2Suo" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,6 +45,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Problem6_Basics.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
