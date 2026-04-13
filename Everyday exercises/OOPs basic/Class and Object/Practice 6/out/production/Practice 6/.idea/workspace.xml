@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="975958f1-8c95-4f21-ba13-185d196c0b2e" name="Changes" comment="OOPs basic revision" />
+    <list default="true" id="975958f1-8c95-4f21-ba13-185d196c0b2e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Problem6_Basics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,19 +62,6 @@
       <option name="presentableId" value="Default" />
       <updated>1775820037519</updated>
     </task>
-    <task id="LOCAL-00001" summary="OOPs basic revision">
-      <option name="closed" value="true" />
-      <created>1775909364103</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1775909364103</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="OOPs basic revision" />
-    <option name="LAST_COMMIT_MESSAGE" value="OOPs basic revision" />
   </component>
 </project>
