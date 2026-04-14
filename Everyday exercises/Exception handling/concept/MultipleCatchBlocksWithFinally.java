@@ -15,9 +15,6 @@ public class MultipleCatchBlocksWithFinally {
         }catch (ArithmeticException e){
             System.out.println("Exception 1 : "+e.getMessage());
         }
-        catch (Exception e){
-            System.out.println("IF any other exception occurred rather than first 2 \nit will be handled by this catch block \nexception : "+e.getMessage());
-        }
         // SECOND TRY BLOCK - for array
         try {
             System.out.println(arr[5]);
