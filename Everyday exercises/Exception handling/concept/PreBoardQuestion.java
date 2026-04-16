@@ -1,4 +1,8 @@
-import java.util.*;
+/*
+* Write a java program that will read balance and withdrawal amount from
+* keyboard and display remaining balance on screen if balance if greater
+* otherwise throw an ApplicationException with appropriate message.
+* */import java.util.*;
 public class PreBoardQuestion {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
