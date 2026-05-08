@@ -16,7 +16,7 @@ Rules:
 •	Focus on clean logic
 */
 import java.util.*;
-public class Problem2 {
+public class Word_Frequency_Analyzer {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter sentence : ");
