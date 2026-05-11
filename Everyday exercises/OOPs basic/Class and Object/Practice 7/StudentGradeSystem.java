@@ -1,5 +1,4 @@
 import java.util.Arrays;
-
 /*
 * Problem 1: Student Grade System (OOP + Arrays + Logic)..another set
 Create a Student class with:
@@ -45,8 +44,8 @@ public class StudentGradeSystem {
         for(int i = 1; i<students.length; i++){
             double currentAvg = students[i].calculateAverage();
             if(currentAvg>highestAvg){
-                highestAvgStudent = students[i];
-                highestAvg = currentAvg;
+                highestAvgStudent = students[i];// update Student object
+                highestAvg = currentAvg;// update highest average variable
             }
         }
         System.out.println("Student with highest average is : ");
