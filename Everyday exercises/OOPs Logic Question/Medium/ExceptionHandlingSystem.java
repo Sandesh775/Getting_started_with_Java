@@ -27,7 +27,7 @@
  */
 public class ExceptionHandlingSystem {
 }
-class InvalidGradeException extends Exception{
+class InvalidGradeException extends RuntimeException{
     public InvalidGradeException() {
     }
 
@@ -35,7 +35,7 @@ class InvalidGradeException extends Exception{
         super(message);
     }
 }
-class StudentNotFoundException extends Exception{
+class StudentNotFoundException extends RuntimeException{
     public StudentNotFoundException() {
     }
 

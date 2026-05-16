@@ -54,13 +54,8 @@ public class GenericRepositoryPattern {
                 new Student(5,"Sandesh",55.9)
        };
        ArrayList<Student> studentsList = new ArrayList<Student>(Arrays.asList(students));// Array to ArrayList conversion
-       StudentRepository studentrepo = null;
-       try{
-           studentrepo = new StudentRepository(studentsList);// new obj of StudentRepository class and passing array list !
-           // variable scope problem occur if create stduentrepository object inside try block !
-       }catch (InvalidGradeException e){
-           System.out.println(e.getMessage());
-       }
+       StudentRepository studentrepo = new StudentRepository(studentsList);// new obj of StudentRepository class and passing array list !
+           // variable scope problem occur if create studentrepository object inside try block !
        // creating ArrayList of 3 Books
        ArrayList<Book> books = new ArrayList<>(3);
        // adding each object !
@@ -84,13 +79,9 @@ public class GenericRepositoryPattern {
        System.out.println(allBooks);
 
        // Delete student id 1
-       try{
            studentrepo.delete(1);
            System.out.println("Deleting student by id : 1 :- ");
            System.out.println("Deleting........................");
-       }catch (StudentNotFoundException e){
-           System.out.println("Can't delete student : "+e.getMessage());
-       }
 
        // Displaying all remaining students
        System.out.println("Displaying all remaining students :- ");
@@ -99,13 +90,36 @@ public class GenericRepositoryPattern {
            //System.out.println(s.toString());
            System.out.println(s);
        }
+       // Test 1: Invalid grade
+       try {
+           Student bad = new Student(10, "Bad", 150);
+           studentrepo.add(bad);
+       } catch (InvalidGradeException e) {
+           System.out.println("Caught: " + e.getMessage());
+       }
+       // Test 2: Student not found
+       try {
+           Student found = studentrepo.getById(999);
+       } catch (StudentNotFoundException e) {
+           System.out.println("Caught: " + e.getMessage());
+       }
+
+       // Test 3: Valid operations
+       try {
+           Student good = new Student(1, "Good", 85);
+           studentrepo.add(good);
+           Student retrieved = studentrepo.getById(1);
+           System.out.println("Success: " + retrieved);
+       } catch (Exception e) {
+           System.out.println("Unexpected: " + e.getMessage());
+       }
     }
 }
 interface Repository<T>{
     //void add(T item);
-    void add(T item) throws Exception;//InvalidGradeException;
+    void add(T item);// throws Exception;//InvalidGradeException;
    // T getById(int id);
-   T getById(int id) throws Exception;//StudentNotFoundException;
+   T getById(int id);// throws Exception;//StudentNotFoundException;
     List<T> getAll();
     void delete(int id);
 }
@@ -181,7 +195,8 @@ class StudentRepository implements Repository<Student>{// Student type !
     }
 
     @Override
-    public void add(Student item) throws InvalidGradeException {
+    public void add(Student item)// Removed 'throws' clause throws InvalidGradeException
+     {
         //if grade < 0 or grade > 100
         if(item.getGrade()<0 || item.getGrade()>100){
             throw new InvalidGradeException("Student's grade can't be negative or more than 100 !");
@@ -190,7 +205,8 @@ class StudentRepository implements Repository<Student>{// Student type !
     }
 
     @Override
-    public Student getById(int id) throws StudentNotFoundException{
+    public Student getById(int id)// Removed 'throws' clause throws StudentNotFoundException
+{
         //if id not found
         for(Student s : list){
             if(s.getId()==id){
@@ -209,15 +225,14 @@ class StudentRepository implements Repository<Student>{// Student type !
     }
 
     @Override
-    public void delete(int id) {
-        Student obj = null;
+    public void delete(int id){
         for(Student s : list){
-            if(s.getId()==id){
-                obj = s;
-                break;
+            if(s.getId() == id){
+                list.remove(s);
+                return;
             }
         }
-        list.remove(obj);
+        System.out.println("Cannot delete - ID not found: ");
     }
 }
 class BookRepository implements Repository<Book>{
@@ -250,13 +265,12 @@ class BookRepository implements Repository<Book>{
 
     @Override
     public void delete(int id) {
-        Book B = null;
         for(Book b: list){
             if(b.getId()==id){
-               B = b;
-               break;
+                list.remove(b);
+                return;
             }
         }
-        list.remove(B);
+        System.out.println("ID not found !");
     }
 }
