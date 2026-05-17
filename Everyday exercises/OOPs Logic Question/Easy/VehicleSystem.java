@@ -17,7 +17,15 @@ Loop through array and call start() on each
 Question after you code: To add a Truck, how many existing classes must change?*/
 public class VehicleSystem {
     public static void main(String[] args) {
+        Car c1 = new Car();
+        Bike b1 = new Bike();
+        // Array of vehicle
+        Vehicle [] vehicles = {c1,b1};
 
+        // loop through array
+        for(Vehicle v : vehicles){
+            v.start();
+        }
     }
 }
 interface Vehicle{
@@ -35,3 +43,4 @@ class Bike implements Vehicle{
         System.out.println("Bike engine started");
     }
 }
+// Answer : Zero !
