@@ -23,10 +23,15 @@ public class Main {
         // demo of enum with switch
         LogLevel level = LogLevel.INFO;
 
-        switch (level){
+        switch (level) {
             case INFO -> System.out.println("Info message");
             case ERROR -> System.out.println("Error !");
             case WARNING -> System.out.println("Warning !");
         }
+
+        System.out.println("\n--- Months Enum Demo ---");
+        // Accessing any enum value will load the enum class and trigger constructors for all constants
+        Months firstMonth = Months.JANUARY;
+        System.out.println("First month of the year: " + firstMonth);
     }
 }
