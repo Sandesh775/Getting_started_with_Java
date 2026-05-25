@@ -11,7 +11,7 @@ public class CheckPrimenum{
             return;      
             }
         boolean isCount = false;
-        for(int i = 2; i < prime ; i++){// we are checking if this number is divisible by any number except 1 & number it self
+        for(int i = 2; i*i <= prime ; i++){// we are checking if this number is divisible by any number except 1 & number it self
             if( prime % i == 0){        // becasue we have definition that prime number is divisible by 1 and number itself !!
                 isCount = true;
                 break;
