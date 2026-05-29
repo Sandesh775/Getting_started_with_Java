@@ -23,7 +23,7 @@ public class Main {
         // demo of enum with switch
         LogLevel level = LogLevel.INFO;
 
-        switch (level) {
+        switch (level){
             case INFO -> System.out.println("Info message");
             case ERROR -> System.out.println("Error !");
             case WARNING -> System.out.println("Warning !");
